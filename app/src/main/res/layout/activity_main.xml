@@ -4,59 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <View
         android:id="@+id/topView"
         android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:background="#0099ff"
+        android:layout_height="177dp"
+        android:background="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/waveView"
-        android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:background="@drawable/ic_wave"
+        android:id="@+id/view"
+        android:layout_width="161dp"
+        android:layout_height="38dp"
+        app:layout_constraintBottom_toBottomOf="@+id/topView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topView" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_person_24" />
-
-    <TextView
-        android:id="@+id/topText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:text="Đăng nhập vào tài khoản"
-        android:textColor="@android:color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
 
     <EditText
         android:id="@+id/inputEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/border_radius"
         android:drawableStart="@drawable/ic_email"
@@ -68,7 +44,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/waveView" />
+        app:layout_constraintTop_toBottomOf="@+id/view6" />
 
     <EditText
         android:id="@+id/inputPassword"
@@ -93,10 +69,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/radius_btt"
-        android:text="Đăng Nhập"
+        android:text="Sign in"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,40 +80,14 @@
         app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
 
     <TextView
-        android:id="@+id/quenMk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Quên mật khẩu ?"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
-
-    <TextView
-        android:id="@+id/or"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="OR"
-        android:textColor="#7C7474"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quenMk" />
-
-    <TextView
         android:id="@+id/dangKy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:text="Chưa có tài khoản? Đăng ký ngay!"
-        android:textColor="@color/colorPrimaryDark"
+        android:text="Forgot Password?"
+        android:textColor="#FFC107"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -149,27 +99,142 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="32dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/or">
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogin">
 
-        <ImageView
-            android:id="@+id/imageView8"
+        <Button
+            android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/fb" />
+            android:background="@drawable/bo_gmail"
+            android:text="Gmail"
+            android:textColor="#FFFFFF" />
 
-        <ImageView
-            android:id="@+id/imageView7"
+        <Button
+            android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/gg" />
-
+            android:background="@drawable/bo_fb"
+            android:text="Facebook"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="82dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dot"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="theme"
+        android:textColor="#4CAF50"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Don't have account? Sign up now!"
+        android:textColor="#302E2C"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dangKy" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="324dp"
+        android:layout_marginBottom="680dp"
+        android:background="@drawable/botron_vang"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="352dp"
+        android:layout_marginBottom="628dp"
+        android:background="@drawable/botron_xanh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="276dp"
+        android:layout_marginTop="688dp"
+        android:background="@drawable/botron_vang"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="648dp"
+        android:background="@drawable/botron_xanh"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topView" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Sign in"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view6"
+        app:layout_constraintStart_toStartOf="@+id/view6"
+        app:layout_constraintTop_toBottomOf="@+id/topView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
